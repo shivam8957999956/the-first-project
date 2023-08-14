@@ -1,0 +1,11 @@
+<div class="home-container">
+  <ng-container *ngIf="loggedInUser; else notLoggedIn">
+    <h2>Welcome, {{ loggedInUser.username }}!</h2>
+    <p>Your email: {{ loggedInUser.email }}</p>
+    <button (click)="logout()">Logout</button>
+  </ng-container>
+  <ng-template #notLoggedIn>
+    <h2>Please login to use our amazing services</h2>
+    <p class="animated-text">Discover a world of possibilities!</p>
+  </ng-template>
+</div>
